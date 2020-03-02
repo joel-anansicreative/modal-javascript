@@ -1,0 +1,31 @@
+  <script>
+    $(function() {
+  $('.contact-button').click(function() {
+    $('.modal').fadeIn();
+    $('.modal-background').fadeIn();
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100%";
+    e.stopPropagation();
+  });
+  $('.close-modal').click(function() {
+      $('.modal').fadeOut();
+      $('.modal-background').fadeOut();
+      document.body.style.overflow = "auto";
+      document.body.style.height = "auto";
+  });  
+  $('.modal-background').click(function() {
+      $('.modal').fadeOut();
+      $('.modal-background').fadeOut();
+      document.body.style.overflow = "auto";
+      document.body.style.height = "auto";
+  }); 
+  $(document).keydown(function (event) {
+      if (event.keyCode == 27) {
+          $('.modal').fadeOut();
+          $('.modal-background').fadeOut();
+          document.body.style.overflow = "auto";
+          document.body.style.height = "auto";
+      }
+  });
+});
+</script>
